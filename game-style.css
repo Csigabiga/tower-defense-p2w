@@ -1,0 +1,208 @@
+/*LOPOTT KÓD*/
+.P2Wbutton {
+    position: absolute;
+    top: 1000px;
+    left: 300px;
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 40px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+
+
+
+.smallBlock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0.95;
+}
+
+.monster {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    background-color: rgb(255, 0, 0);
+    border-radius: 16px;
+    z-index: 10;
+}
+
+
+
+.highLightBlock {
+    z-index: 15;
+}
+
+
+.highLightBlock:hover {
+    opacity: 0.8;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: groove;
+}
+
+.towerDiv {
+    display: flex;
+    background-color: darkred;
+    opacity: 0.8;
+    position: absolute;
+    width: 160px;
+    height: 85px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    align-items: center;
+    place-content: center;
+}
+
+.tower{
+    background-color: #ffffff;
+    opacity: 0.8;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-width: 4px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+.tower::after {
+    content: 'Range: ' attr(data-range) ' || ' 'Damage: ' attr(data-damage);
+    position: absolute;
+    z-index: 15;
+    top: -30px;
+    opacity: 0;
+    width: max-content;
+    transition: 1s;
+}
+.tower:hover::after {
+    opacity: 1;
+}
+
+#circle.in {
+    width: 100px;
+    height: 100px;
+    display: block;
+    color: red;
+    border-width: 5px;
+}
+
+#circle{
+    width: 100px;
+    height: 100px;
+    border: 5px solid red;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 15;
+}
+
+
+.start-btn {
+    position: relative;
+    z-index: 10;
+}
+
+.reset {
+    position: relative;
+    z-index: 10;
+}
+
+.pause-btn {
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    z-index: 20;
+    border: red solid 2px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: max-content;
+    background-color: blueviolet;
+    font-size: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.money {
+    display: flex;
+    place-self: center flex-end;
+}
+
+.score {
+    display: flex;
+}
+
+.player-hp {
+    display: flex;
+}
+
+.wave {
+    display: flex;
+}
+
+.next-wave-btn {
+    visibility: hidden;
+}
+.towerButton {
+    font-size: x-large;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.tower-info {
+    position: relative;
+    z-index: 50;
+    top: 1000px;
+    left: 50px;
+}
